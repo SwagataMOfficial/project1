@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using HTML, CSS create display an image overlay effect on hover</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image {
+            width: 600px;
+            height: 625px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            /* transition: 1s; */
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image::after {
+            transform: translateY(100%);
+            content: "Pansy Flower";
+            width: 100%;
+            height: 100%;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 3rem;
+            font-weight: bold;
+            font-family: system-ui;
+            transition: 0.4s ease-in-out;
+        }
+
+        .image:hover.image::after {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="https://m.media-amazon.com/images/I/51btA06OrfL._AC_UF1000,1000_QL80_.jpg" alt="image not found">
+        </div>
+    </div>
+</body>
+
+</html>

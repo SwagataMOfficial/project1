@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Using HTML, CSS create a list with floating headings for each section</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lists {
+            background: #0080ff;
+            color: white;
+            height: 70vh;
+            width: 22vw;
+            overflow: auto scroll;
+        }
+
+        .lists>ul {
+            margin-bottom: 1rem;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            align-items: center;
+        }
+
+        .lists label {
+            position: sticky;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-weight: bold;
+            background: #263238;
+            color: #cfd8dc;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            padding: 0.25rem 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lists li {
+            list-style: none;
+            grid-column: 2;
+            margin: 0;
+            padding: 0.75rem;
+        }
+
+        .lists>ul:first-of-type>li:first-of-type {
+            margin-top: 0.25rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="lists">
+            <ul>
+                <label>A</label>
+                <li>Aatreyo</li>
+                <li>Akash</li>
+                <li>Ankush</li>
+                <li>Arnab</li>
+
+                <label>B</label>
+                <li>Bikash</li>
+                <li>Bipradip</li>
+                <li>Bishal</li>
+
+                <label>C</label>
+                <li>Caddam</li>
+                <li>Cameroon</li>
+                <li>Campbell</li>
+                <li>Cane</li>
+
+                <label>D</label>
+                <li>Dinesh</li>
+                <li>Duresh</li>
+                <li>Debarghya</li>
+                <li>Daivya</li>
+
+                <label>S</label>
+                <li>Soumyadip</li>
+                <li>Sourav</li>
+                <li>Sounak</li>
+                <li>Surajit</li>
+                <li>Swagata</li>
+                <li>Swagatam</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

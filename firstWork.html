@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using HTML, CSS create a styled checkbox</title>
+    <style>
+        label {
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+
+        #check{
+            outline: 1px solid blue;
+            width: 20px;
+            height: 20px;
+            margin: 0 20px;
+        }
+        
+        #check:checked {
+            outline: 1px solid black;
+            accent-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <input type="checkbox" name="oranges" id="check">
+        <label for="checkbox">Oranges</label>
+        <input type="checkbox" name="bananas" id="check">
+        <label for="checkbox">Bananas</label>
+    </form>
+</body>
+
+</html>
